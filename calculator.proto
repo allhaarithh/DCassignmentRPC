@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Calculator {
+    rpc Compute (Operation) returns (Result);
+}
+
+message Operation {
+    string operation = 1;  // "add", "subtract", "multiply", "divide"
+    double num1 = 2;
+    double num2 = 3;
+}
+
+message Result {
+    double result = 1;
+}
